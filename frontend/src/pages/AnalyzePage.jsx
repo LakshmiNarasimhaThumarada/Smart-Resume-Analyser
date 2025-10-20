@@ -67,7 +67,7 @@ const handleSubmit = async (e) => {
   formData.append('jobDescription', jobDesc);
 
   try {
-    const response = await axios.post('http://localhost:8080/api/match', formData);
+    const response = await axios.post('${import.meta.env.VITE_API_BASE_URL}/api/match', formData);
     
     // Extract ALL necessary fields from the response data
     const { 

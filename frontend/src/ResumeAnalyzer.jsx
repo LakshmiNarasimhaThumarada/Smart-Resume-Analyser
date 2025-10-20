@@ -31,7 +31,7 @@ function ResumeAnalyzer() {
     formData.append("jobDescription", jobDescription);
 
     try {
-      const response = await axios.post("http://localhost:8080/api/match", formData, {
+      const response = await axios.post("${import.meta.env.VITE_API_BASE_URL}/api/match", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

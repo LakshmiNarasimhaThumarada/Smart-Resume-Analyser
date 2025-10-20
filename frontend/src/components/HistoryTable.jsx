@@ -4,7 +4,7 @@ const HistoryTable = () => {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/history")
+    fetch("${import.meta.env.VITE_API_BASE_URL}/api/history")
       .then((res) => res.json())
       .then((data) => setHistory(data))
       .catch((err) => console.error("Error fetching history:", err));

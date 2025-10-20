@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import './ResultPage.css';
 
+
+
 // Framer Motion variants
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,7 +45,7 @@ function ResultPage() {
     // New function to handle the LinkedIn search
     const handleFindJobsOnLinkedIn = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/api/find-linkedin-jobs', {
+            const response = await axios.post('${import.meta.env.VITE_API_BASE_URL}/api/find-linkedin-jobs', {
                 jobDescription: jobDescription
             });
             const linkedinUrl = response.data;
