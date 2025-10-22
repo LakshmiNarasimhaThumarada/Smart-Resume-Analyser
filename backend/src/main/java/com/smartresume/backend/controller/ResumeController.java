@@ -16,7 +16,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = {"http://localhost:5173"})
+@CrossOrigin(origins = {"https://smart-resume-analyzer.up.railway.app"})
 public class ResumeController {
 
     private final ResumeService resumeService;
